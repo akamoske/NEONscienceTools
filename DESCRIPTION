@@ -1,0 +1,10 @@
+Package: NEONscienceTools
+Title: R package to make working with various NEON science data easier.
+Version: 0.0.1
+Authors@R: person("Aaron", "Kamoske", email = "kamoskea@msu.edu", role = c("aut", "cre"))
+Description: This repository will be updated with various functions to help process and analyze NEON science data. Explanations and examples of how to use these functions can be found in the help documents for the individual function.
+Depends: rgeos, rgdal, raster
+License: GPL-2 + file LICENSE
+Encoding: UTF-8
+LazyData: FALSE
+RoxygenNote: 6.1.1
