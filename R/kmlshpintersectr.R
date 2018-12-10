@@ -32,6 +32,10 @@
 #' plot(serc.tiles$loc.data.shp, add = TRUE)
 #' serc.tiles$laz.tiles
 #' 
+#' # the list of kml files is returned as a pattern so that it can be used with the list.files function to
+#' # return the files that you need to use
+#' list.files("./NEON_Flight_Boundary_KML/SERC2017", pattern = serc.tiles$laz.tiles)
+#' 
 #' @param kml.files.path file path to the kml files you want to process
 #' @param shp.file.path file path to the shape file you want to intersect with the kml files
 #' @param shp.file.name name of the shapefile
