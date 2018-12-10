@@ -51,4 +51,8 @@ serc.tiles <- kml.shp.intersectR(kml.files.path = "./NEON_Flight_Boundary_KML/SE
 plot(serc.tiles$laz.tiles.shp)
 plot(serc.tiles$loc.data.shp, add = TRUE)
 serc.tiles$laz.tiles
+
+# the list of kml files is returned as a pattern so that it can be used with the list.files function to
+# return the files that you need to use
+list.files("./NEON_Flight_Boundary_KML/SERC2017", pattern = serc.tiles$laz.tiles)
 }
