@@ -122,11 +122,8 @@ kml.shp.intersectR <- function(kml.files.path, shp.file.path, shp.file.name, eps
   #convert list of file names to pattern
   file.pattern <- paste(laz.names, collapse = "|")
   
-  #list all files in directory than match above pattern
-  laz.files <- list.files(kml.files.path, pattern = file.pattern, full.names = TRUE)
-  
   #return the final data
-  final.data <- list("laz.tiles.shp" = shp.files.merged, "loc.data.shp" = shp.data.proj, "laz.tiles" = laz.files)
+  final.data <- list("laz.tiles.shp" = shp.files.merged, "loc.data.shp" = shp.data.proj, "laz.tiles" = file.pattern)
   return(final.data)
 }
   
