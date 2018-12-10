@@ -112,9 +112,12 @@ kml.shp.intersectR <- function(kml.files.path, shp.file.path, shp.file.name, eps
   
   #lets intersect these
   laz.tiles <- raster::intersect(shp.data.proj, shp.files.merged)
+                      
+  #lets find the number of columns
+  col.num <- ncol(laz.tiles)
   
   #lets save the laz tile names so we can moves some files around
-  laz.names <- raster::unique(laz.tiles$name)
+  laz.names <- raster::unique(laz.tiles@data[,col.num])
   
   #convert list of file names to pattern
   file.pattern <- paste(laz.names, collapse = "|")
